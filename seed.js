@@ -1,5 +1,5 @@
-import mongoose from 'mongoose';
-import { Property } from './models/Property.js'; // Adjust the path as needed
+const mongoose = require('mongoose');
+const Property = require('./models/Property.js'); 
 
 // Sample property data
 const properties = [
@@ -11,6 +11,7 @@ const properties = [
     financials: {
       purchasePrice: -7380740,
       rentalIncome: [449177, 497702, 497702, 497702],
+      shares:10,
       salePrice: 8520842,
       unleveredCFs: [-6931563, 497702, 497702, 9018545],
       yieldOnCost: [6.1, 6.7, 6.7, null],
@@ -64,6 +65,7 @@ const properties = [
     financials: {
       purchasePrice: -3832167,
       rentalIncome: [233218, 314122, 314122, 314122],
+      shares:5,
       salePrice: 5377874,
       unleveredCFs: [-3598949, 314122, 314122, 5695991],
       yieldOnCost: [6.1, 8.2, 8.2, null],
@@ -88,6 +90,7 @@ const properties = [
     financials: {
       purchasePrice: -5779093,
       rentalIncome: [351704, 496704, 496704, 496704],
+      shares:7,
       salePrice: 8503749,
       unleveredCFs: [-5427389, 496704, 496704, 9000453],
       yieldOnCost: [6.1, 8.6, 8.6, null],

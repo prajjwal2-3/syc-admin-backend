@@ -7,6 +7,7 @@ const propertySchema = new mongoose.Schema({
   buildInfo: String,
   financials: {
     purchasePrice: Number,
+    shares:Number,
     rentalIncome: [Number],
     salePrice: Number,
     unleveredCFs: [Number],
