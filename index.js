@@ -10,7 +10,8 @@ const port = 5000;
 app.use(bodyParser.json());
 app.use(cors());
 // Connect to MongoDB
-
+mongoose.connect('mongodb+srv://prajjwalbh25:AtZMTaWRJWT6uRl1@cluster0.rbysjio.mongodb.net/syc').then(() => console.log('Connected to MongoDB'))
+.catch(err => console.error('Could not connect to MongoDB', err));
 // Routes
 
 // Get all properties
@@ -63,9 +64,9 @@ app.delete('/properties/:id', async (req, res) => {
 });
 
 // Start the server
-app.listen(port,async  () => {
+app.listen(port, () => {
    try{
-    await mongoose.connect('mongodb+srv://prajjwalbh25:AtZMTaWRJWT6uRl1@cluster0.rbysjio.mongodb.net/syc');
+    
     console.log(`Server running on http://localhost:${port}`);
    }catch(err){
     console.log(err)
